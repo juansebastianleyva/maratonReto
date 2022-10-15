@@ -109,8 +109,9 @@ function updateCategory(){
         contentType : 'application/json',
         success : function(p) {
             console.log(p);
-            cleanData();
+            cancelUpdateCategory();
             getAllCategory();
+
         },
         error : function(xhr, status) {
             alert('ha sucedido un problema');
