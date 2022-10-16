@@ -20,12 +20,12 @@ public class Reservation {
 
     @ManyToOne
     @JoinColumn(name="libId")
-    @JsonIgnoreProperties("reservations")
+    @JsonIgnoreProperties({"reservations","messages"})
     private Library lib;
 
     @ManyToOne
     @JoinColumn(name="clientId")
-    @JsonIgnoreProperties({"reservations","message"})
+    @JsonIgnoreProperties({"reservations","messages"})
     private Client client;
 
 
